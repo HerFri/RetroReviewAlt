@@ -1,1 +1,1 @@
-web: gunicorn retroreview.wsgi
+web: gunicorn RetroReview.wsgi
