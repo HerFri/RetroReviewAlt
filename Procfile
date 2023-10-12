@@ -1,1 +1,1 @@
-web: gunicorn retroreview-herfri.wsgi
+web: gunicorn retroreview.wsgi
