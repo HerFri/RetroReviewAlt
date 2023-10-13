@@ -34,8 +34,7 @@ class Game(models.Model):
     def __str__(self):
         return self.title
     
-    def number_of_likes(self):
-        return self.likes.count()
+    
 
 class Review(models.Model):
     #title = models.CharField(max_lenght=200, unique=True) # can act as excerpt?
@@ -48,12 +47,18 @@ class Review(models.Model):
     #featured_image = CloudinaryField('image', default='placeholder') # Users can upload their own screenshots?
     excerpt = models.TextField(blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name='review_likes', blank=True)
+    likes = models.ManyToManyField(User, related_name='likes', blank=True)
     rating = models.DecimalField(choices=STARS, max_digits=2, decimal_places=1)
     id = models.AutoField(primary_key=True, editable=False)    
     
-    class Meta:
-        ordering = ['-likes']
+    #class Meta:
+    #    ordering = ['-likes'] # fails at migration
+
+    def number_of_likes(self):
+        return self.likes.count()
+    
+    def ordered_by_likes(self):
+        return self.likes.order_by('-likes')
 
     def __str__(self):
         return f"Review {self.content} by {self.username}"
