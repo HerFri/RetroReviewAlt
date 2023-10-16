@@ -28,7 +28,7 @@ class Game(models.Model):
 
 class Review(models.Model):
     title = models.CharField(max_length=200, unique=True, blank=True) # default=Game.title? # can act as excerpt?
-    #slug = models.SlugField(max_lenght=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
     username = models.ForeignKey(User, on_delete=models.CASCADE)
     game = models.ForeignKey(Game, on_delete=models.CASCADE)
     updated_on = models.DateTimeField(auto_now=True)
