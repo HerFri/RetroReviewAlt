@@ -28,8 +28,8 @@ class Game(models.Model):
 
 class Review(models.Model):
     title = models.CharField(max_length=200, unique=True, blank=True) # default=Game.title? # can act as excerpt?
-    slug = models.SlugField(max_length=200, unique=True, default='review')
-    username = models.ForeignKey(User, on_delete=models.CASCADE)
+    slug = models.SlugField(max_length=200, unique=True, default='')
+    username = models.ForeignKey(User, on_delete=models.CASCADE) #ForeignKey?
     game = models.ForeignKey(Game, on_delete=models.CASCADE)
     updated_on = models.DateTimeField(auto_now=True)
     created_on = models.DateTimeField(auto_now_add=True)
@@ -54,4 +54,17 @@ class Review(models.Model):
         return f"Review {self.content} by {self.username}"
 
 
+class Comment(models.Model):
+    review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name='comments')
+    username = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+    
+    class Meta:
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.username}"
 
