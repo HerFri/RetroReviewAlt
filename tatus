@@ -1,0 +1,161 @@
+[33mcommit cf36a59350eaa31f4d108663db137d2809917be5[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Wed Oct 18 15:50:11 2023 +0200
+
+    add view for Game class, add template files, add css folder and file
+
+[33mcommit 1c12eb3d64c5e2aa7e744a41a71df7d256d1b64c[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Tue Oct 17 00:24:53 2023 +0200
+
+    add approve_comments action
+
+[33mcommit d7bc122f1ce940d5a6aa12a7b3d6b1164f952dbb[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Mon Oct 16 23:17:34 2023 +0200
+
+    add Comment class in models.py
+
+[33mcommit c66ae0deb4992874fb36fbf840ac08525447413b[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Mon Oct 16 22:42:25 2023 +0200
+
+    add some elements to Admin Panel
+
+[33mcommit c57970e644f7d997c594943a5017c60b653a7551[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Mon Oct 16 22:09:21 2023 +0200
+
+    add slug field to Review class model
+
+[33mcommit f7f41c30b3547a46826dc4ad2bd2c95c25c7600a[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Sat Oct 14 17:22:21 2023 +0200
+
+    update title of class Review
+
+[33mcommit 9633cbfc178f4fd2927d096ed6e1fdbae4d42cdd[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Sat Oct 14 16:59:55 2023 +0200
+
+    update Game model
+
+[33mcommit ca216a42e70c7d0f3842b37f0360554a9eef8000[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Sat Oct 14 16:53:49 2023 +0200
+
+    add platforms.py, migrate updated models
+
+[33mcommit d1baafac532fd5762cbeb06a278f6685a313e412[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Sat Oct 14 15:34:58 2023 +0200
+
+    add genres.py, stars.py, status.py files, edit class Game, migrate changes
+
+[33mcommit 06a35e52de73e3e81601532aa48e9e684c52b443[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Sat Oct 14 14:32:55 2023 +0200
+
+    add summernote and user for 'content' field of class Review
+
+[33mcommit 59d6b80ae6f6fd6af3264b609f8f9c43ee9cde9c[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Sat Oct 14 00:23:27 2023 +0200
+
+    create superuser, register Game model
+
+[33mcommit 86a3f60bf097771626064f93b2ecdc23bf6ce629[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Fri Oct 13 23:48:52 2023 +0200
+
+    migrate models
+
+[33mcommit 03804b04dd4637fa9ec519c49d32415c75c0ef12[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Thu Oct 12 23:16:03 2023 +0200
+
+    edit Heroku URL in ALLOWED_HOSTS
+
+[33mcommit b8ba3285ba3733e6d06c5a0f225efdf9694bae10[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Thu Oct 12 23:13:56 2023 +0200
+
+    edit name of base folder on Procfile
+
+[33mcommit fe7615c8a6849dcee8a40148ee24e383e0058518[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Thu Oct 12 23:08:04 2023 +0200
+
+    change name in Procfile
+
+[33mcommit 75de2d1b2727812376771178cd91c5c70bef30f3[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Thu Oct 12 22:54:05 2023 +0200
+
+    edit Herok host name in Allowed_hosts becasue of application error
+
+[33mcommit 001c10dcc976cb193e1395459d28cbec87d67205[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Thu Oct 12 22:49:19 2023 +0200
+
+    add cloudinary to INSTALLED_APPS
+
+[33mcommit 926fe299d384849f30bab90213e2440480d01f59[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Thu Oct 12 22:40:40 2023 +0200
+
+    change herokuapp URL for ALLOWED_HOSTS
+
+[33mcommit fd86f03f21537bc4289d6ded6cfea16e9c8a14f1[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Thu Oct 12 22:35:14 2023 +0200
+
+    add correct appname in Procfile, change URL for herokuapp back to previous
+
+[33mcommit e8cc9ec103884e5b338029a2d3459282f868a750[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Thu Oct 12 22:16:43 2023 +0200
+
+    change URL for herokuapp in ALLOWED_HOSTS
+
+[33mcommit 5677a20234572fc7a65e4111d1cbd48031ecfa20[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Thu Oct 12 22:00:25 2023 +0200
+
+    deployment commit
+
+[33mcommit b76f4df488231a9191f57efce03b8372ceb29b3d[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Thu Oct 12 21:00:28 2023 +0200
+
+    migrate to ElephantSQL
+
+[33mcommit 1b92c8f52142f95fc396f04e74b519a292080da9[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Thu Oct 12 20:42:44 2023 +0200
+
+    migrate to database
+
+[33mcommit 528ea1ed489457f1d782e04e348cde5757bf0e35[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Thu Oct 12 20:17:08 2023 +0200
+
+    install libraries, create Project 'RetroReview', create app 'review', create env.py
+
+[33mcommit c48175ffaf8a9932df4cdc0d38edc28652350c63[m
+Author: Her Fri <herbert.frichert@outlook.de>
+Date:   Thu Oct 12 20:05:36 2023 +0200
+
+    create virtual environment, hide env folder
+
+[33mcommit 8897d089108812dec7dba5a1baf677702ca077de[m
+Author: HerFri <136443358+HerFri@users.noreply.github.com>
+Date:   Thu Oct 12 19:37:43 2023 +0200
+
+    Add a new user story template
+
+[33mcommit 327b3baf69be58c117d7f2d24f5102d6f01e88f1[m
+Author: HerFri <136443358+HerFri@users.noreply.github.com>
+Date:   Thu Oct 12 19:30:36 2023 +0200
+
+    Initial commit

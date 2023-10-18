@@ -8,19 +8,19 @@
         <!-- Games Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-            {% for game in games %}
+            {% for game in game_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in game.featured_image.url %}
                                 <img class="card-img-top" 
-                                    src="https://thenounproject.com/api/private/icons/3674270/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" alt="No image available" style="width:100%">
+                                    src="https://thenounproject.com/api/private/icons/3674270/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" alt="No image available" style="max-width: 350px; max-height: 250px">
                                 {% else %}
-                                <img class="card-img-top" src="{{ game.featured_image.url }}" alt="Game cover image" style="width:100%">
+                                <img class="card-img-top" src="{{ game.featured_image.url }}" alt="Game cover image" style="max-width: 350px; max-height: 250px">
                                 {% endif %}
                                 <div class="image-flash">                   
-                                    <p class="author">{{ game.title }}</p>  <!-- class from walktrough, see style.css -->
+                                <!--    <p class="author">{{ game.title }}</p> -->  <!-- class from walktrough, see style.css -->
                                 </div>
                                 <a href="#" class="post-link">
                                     <h2 class ="card-title">{{ game.title }}</h2>
@@ -28,7 +28,7 @@
                                 </a>
                                 <hr />
                                 <p class="card-text text-muted h6">{{ game.year }}</p>
-                                <i class="far fa-star"></i>{{ game.rating }} <!-- to be edited! -->
+                            <!--  <i class="far fa-star"></i>{{ game.rating }} --> <!-- to be edited! --> 
                             </div>
                         </div>
                     </div>
