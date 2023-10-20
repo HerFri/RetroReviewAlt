@@ -8,5 +8,5 @@ urlpatterns = [
 #    path('<slug:slug>/', views.GameReviews.as_view(), name='reviews'), # TO BE EDITED!
     #path('reviews/<slug:slug>/', views.ReviewDetail.as_view(), name='reviews'),
     path('<slug:slug>/', views.GameDetail.as_view(), name='game_detail'),
-    path('<slug:slug>/', views.ReviewDetail.as_view(), name='review_detail'),
+    path('<slug:game>/<slug:review>/', views.ReviewDetail.as_view(), name='review_detail'),
 ]                              
