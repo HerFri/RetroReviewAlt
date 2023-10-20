@@ -22,7 +22,7 @@
                                 <div class="image-flash">                   
                                 <!--    <p class="author">{{ game.title }}</p> -->  <!-- class from walktrough, see style.css -->
                                 </div>
-                                <a href="{% url 'reviews.html' game.slug %}" class="post-link">   <!-- add game.id? -->
+                                <a href="{% url 'reviews.detail' game.slug %}" class="post-link">   <!-- add game.id? -->
                                     <h2 class ="card-title">{{ game.title }}</h2>
                                     <p class="card-text">{{ game.genre }}</p> <!-- to be edited! -->
                                 </a>
