@@ -48,3 +48,25 @@ class GameDetail(View):   #Früher: ReviewDetail
                 #"comment_form": CommentForm(),
             },
         )
+    
+class ReviewDetail(View):
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Review.objects.filter(status=1)
+        game = get_object_or_404(Game, slug=slug)
+        review = get_object_or_404(queryset, slug=slug)
+        #reviews = game.review_set.filter(status=1).order_by('-created_on') # Get all reviews related to the game
+        #comments = review.comments.filter(approved=True).order_by('created_on') # in walktrough: comments.filter(approved=True).order_by
+        liked = False
+        if review.likes.filter(id=self.request.user.id).exists():
+            liked = True
+        #if review.likes.filter(id=self.request.user.id).exists():
+        #    liked = True
+
+        return render(
+            request,
+            "review_detail.html",
+            {
+                "review": review,
+                "liked": liked,
+            }
+        )

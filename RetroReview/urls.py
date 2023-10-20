@@ -21,4 +21,5 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('', include('review.urls'), name='review_urls'),
 #    path('reviews/', include('reviews.urls'), name='reviews_urls'),
+#    path('<slug:slug>', include('review.urls'), name='game_url'),
 ]

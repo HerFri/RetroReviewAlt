@@ -1,5 +1,5 @@
 from . import views
-from django.urls import path
+from django.urls import path, include
 
 
 urlpatterns = [
@@ -8,4 +8,5 @@ urlpatterns = [
 #    path('<slug:slug>/', views.GameReviews.as_view(), name='reviews'), # TO BE EDITED!
     #path('reviews/<slug:slug>/', views.ReviewDetail.as_view(), name='reviews'),
     path('<slug:slug>/', views.GameDetail.as_view(), name='game_detail'),
+    path('<slug:slug>/', views.ReviewDetail.as_view(), name='review_detail'),
 ]                              
