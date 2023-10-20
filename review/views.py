@@ -19,22 +19,47 @@ class GameReviews(generic.ListView):    # Site, where all Reviews are listed
     paginate_by = 6
 
 
-class ReviewDetail(View):
+
+class GameDetail(View):   #Früher: ReviewDetail
     
     def get(self, request, slug, *args, **kwargs):
-        queryset = Review.objects.all()     # in walktrough: objects.filter(status=1)
+        queryset = Review.objects.filter(status=1)     # in walktrough: objects.filter(status=1)
         review = get_object_or_404(queryset, slug=slug)
-        comments = review.comments.all().order_by('created_on') # in walktrough: comments.filter(approved=True).order_by
+        comments = review.comments.filter(approved=True).order_by('created_on') # in walktrough: comments.filter(approved=True).order_by
         liked = False
         if review.likes.filter(id=self.request.user.id).exists():
             liked = True
 
         return render(
             request,
-            "review_detail.html",
+            "game_detail.html",
             {   
                 "review": review,
                 "comments": comments,
+                "commented": True,
+                "liked": liked,
+
+                #"comment_form": CommentForm(),
+            },
+        )
+    
+
+class GameDetail(View):
+    
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Game.objects.all()     # in walktrough: objects.filter(status=1)
+        game = get_object_or_404(queryset, slug=slug)
+        #reviews = game.reviews.all().order_by('-created_on') # in walktrough: comments.filter(approved=True).order_by
+        liked = False
+        #if game.review_set.filter(id=self.request.user.id).exists():
+        #    liked = True
+
+        return render(
+            request,
+            "game_detail.html",
+            {   
+                "game": game,
+            #    "reviews": reviews,
                 "liked": liked
             },
         )
