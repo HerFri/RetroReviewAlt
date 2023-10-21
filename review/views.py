@@ -68,5 +68,6 @@ class ReviewDetail(View):
             {
                 "review": review,
                 "liked": liked,
+                "game": game,
             }
         )
