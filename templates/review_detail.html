@@ -7,14 +7,14 @@
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ review.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ review.username }} | {{ review.created_on }}</p>
+                <p class="post-subtitle">Review by: {{ review.username }} | {{ review.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in review.featured_image.url %}
+                {% if "placeholder" in game.featured_image.url %}
                 <img src="https://thenounproject.com/api/private/icons/3674270/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" width="100%">
                 {% else %}
-                <img src="  {{ review.featured_image.url }}" alt="Game cover image" width="100%">
+                <img src=" {{ game.featured_image.url }}" alt="Game cover image" width="100%">
                 {% endif %}
             </div>
         </div>

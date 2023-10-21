@@ -35,7 +35,7 @@ class Review(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     created_on = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
-    #featured_image = CloudinaryField('image', default='placeholder') # Users can upload their own screenshots?
+    #review_image = models.ForeignKey(Game, on_delete=models.CASCADE, related_name='review_image') #CloudinaryField('image', default='placeholder') # Users can upload their own screenshots?
     excerpt = models.TextField(blank=True)
     status = models.IntegerField(choices=STATUS, default=0) 
     likes = models.ManyToManyField(User, related_name='likes', blank=True)
