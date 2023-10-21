@@ -16,6 +16,10 @@ import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
+# Account_Email_Verification
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,7 +34,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['retroreview-herfri-6b3894860994.herokuapp.com', 'localhost', '127.0.0.1', '8000-herfri-retroreview-h1rwum0tx5f.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['retroreview-herfri-6b3894860994.herokuapp.com', 
+                 'localhost', '127.0.0.1', 
+                 '8000-herfri-retroreview-h1rwum0tx5f.ws-eu105.gitpod.io']
 
 
 # Application definition
@@ -41,12 +47,21 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
     'review',
 ]
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

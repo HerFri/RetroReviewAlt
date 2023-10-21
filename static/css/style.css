@@ -10,7 +10,7 @@ body {
 }
 
 .card-img-top {         /* custom css rule */
-    width: auto!important;
+    max-width: auto!important;
     max-height: 300px!important;
 }
 
