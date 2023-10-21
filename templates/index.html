@@ -12,24 +12,27 @@
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <div class="image-container">
+                            <div class="image-container card-img-top">
                                 {% if "placeholder" in game.featured_image.url %}
                                 <img class="card-img-top" 
                                     src="https://thenounproject.com/api/private/icons/3674270/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" alt="No image available">
                                 {% else %}
                                 <img class="card-img-top" src="{{ game.featured_image.url }}" alt="Game cover image">
                                 {% endif %}
-                                <div class="image-flash">                   
-                                <!--    <p class="author">{{ game.title }}</p> -->  <!-- class from walktrough, see style.css -->
-                                </div>
+                            </div>  
+                            <div class="image-flash">                   
+                            <!--    <p class="author">{{ game.title }}</p> -->  <!-- class from walktrough, see style.css -->
+                            </div>
+                            <div>
                                 <a href="{% url 'game_detail' game.slug %}" class="post-link">   <!-- add game.id? -->
                                     <h2 class ="card-title">{{ game.title }}</h2>
-                                    <p class="card-text">{{ game.genre }}</p> <!-- to be edited! -->
+                                    <p class="card-text">{{ game.genre }}</p> 
+                                    <p class="card-text">{{ game.developer }}</p> <!-- to be edited! -->
+                                    <p class="card-text text-muted h6">{{ game.year }}</p>
                                 </a>
-                                <hr />
-                                <p class="card-text text-muted h6">{{ game.year }}</p>
                             <!--  <i class="far fa-star"></i>{{ game.rating }} --> <!-- to be edited! --> 
-                            </div>
+                            </div> 
+                            <hr />
                         </div>
                     </div>
                 </div>

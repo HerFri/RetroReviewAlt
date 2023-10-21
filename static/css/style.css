@@ -10,8 +10,8 @@ body {
 }
 
 .card-img-top {         /* custom css rule */
-    width: 300px!important;
-    height: auto!important;
+    width: auto!important;
+    max-height: 300px!important;
 }
 
 .red-o {
